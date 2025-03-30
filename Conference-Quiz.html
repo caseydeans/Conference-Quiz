@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDS Apostles and First Presidency Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 1rem; background-color: #f3f4f6; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+        .section-title { font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1f2937; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem; }
+        .question { font-size: 1rem; margin-bottom: 0.5rem; color: #374151; }
+        .options { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; }
+        .option { display: inline-flex; align-items: center; padding: 0.5rem 1rem; background-color: #ffffff; border: 1px solid #d1d5db; border-radius: 0.375rem; color: #374151; cursor: pointer; transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; margin-right: 0.5rem; margin-bottom: 0.5rem; }
+        .option:hover { background-color: #f0f0f0; border-color: #9ca3af; color: #1f2937; }
+        .option.selected { background-color: #60a5fa; border-color: #3b82f6; color: #ffffff; }
+        .option.correct { background-color: #16a34a; border-color: #15803d; color: #ffffff; }
+        .option.incorrect { background-color: #dc2626; border-color: #b91c1c; color: #ffffff; }
+        .check-answer-button { padding: 0.5rem 1rem; background-color: #3b82f6; color: #ffffff; font-weight: 500; border-radius: 0.375rem; cursor: pointer; transition: background-color 0.2s ease; font-size: 0.875rem; border: none; }
+        .check-answer-button:hover { background-color: #2563eb; }
+        .check-answer-button:disabled { background-color: #9ca3af; cursor: not-allowed; }
+        .results { margin-top: 1rem; padding: 1rem; background-color: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb; text-align: center; font-size: 1.25rem; font-weight: 600; color: #374151; }
+        .reset-quiz-button { display: block; padding: 0.75rem 1.5rem; background-color: #6b7280; color: #ffffff; font-weight: 500; border-radius: 0.375rem; cursor: pointer; transition: background-color 0.2s ease; margin: 1rem auto; font-size: 1rem; border: none; }
+        .reset-quiz-button:hover { background-color: #4b5563; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container">
+        <h1 class="text-2xl font-semibold mb-4 text-gray-800 text-center">LDS Apostles and First Presidency Quiz</h1>
+        <p class="text-gray-600 text-center mb-6">Test your knowledge of the secular biographies of current LDS Church leaders.</p>
+
+        <div id="quiz-content">
+            <h2 class="section-title">First Presidency</h2>
+
+            <div class="mb-6" data-question="1">
+                <p class="question">1. Russell M. Nelson: Before becoming a full-time Church leader, Russell M. Nelson was a renowned __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Lawyer</div>
+                    <div class="option" data-option="b" tabindex="0">b) Surgeon</div>
+                    <div class="option" data-option="c" tabindex="0">c) Teacher</div>
+                    <div class="option" data-option="d" tabindex="0">d) Businessman</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="2">
+                <p class="question">2. Russell M. Nelson: Dr. Nelson earned his B.A. and M.D. degrees from the University of __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Utah</div>
+                    <div class="option" data-option="b" tabindex="0">b) Harvard</div>
+                    <div class="option" data-option="c" tabindex="0">c) Stanford</div>
+                    <div class="option" data-option="d" tabindex="0">d) Johns Hopkins</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="3">
+                <p class="question">3. Russell M. Nelson: What specialty did Dr. Nelson practice?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Cardiology</div>
+                    <div class="option" data-option="b" tabindex="0">b) Neurosurgery</div>
+                    <div class="option" data-option="c" tabindex="0">c) Cardiothoracic Surgery</div>
+                    <div class="option" data-option="d" tabindex="0">d) Pediatrics</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="4">
+                <p class="question">4. Russell M. Nelson: Dr. Nelson performed the first successful open-heart surgery in the state of __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) California</div>
+                    <div class="option" data-option="b" tabindex="0">b) Utah</div>
+                    <div class="option" data-option="c" tabindex="0">c) New York</div>
+                    <div class="option" data-option="d" tabindex="0">d) Texas</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="5">
+                <p class="question">5. Russell M. Nelson: Before his Church service, Dr. Nelson completed a surgical residency at which institution?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Massachusetts General Hospital</div>
+                    <div class="option" data-option="b" tabindex="0">b) University of Minnesota</div>
+                    <div class="option" data-option="c" tabindex="0">c) Mayo Clinic</div>
+                    <div class="option" data-option="d" tabindex="0">d) Johns Hopkins Hospital</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="6">
+                <p class="question">6. Dallin H. Oaks: Dallin H. Oaks served as the president of __________ University. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Stanford</div>
+                    <div class="option" data-option="b" tabindex="0">b) Harvard</div>
+                    <div class="option" data-option="c" tabindex="0">c) Brigham Young</div>
+                    <div class="option" data-option="d" tabindex="0">d) University of Chicago</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="7">
+                <p class="question">7. Dallin H. Oaks: Before his university presidency, Dallin H. Oaks was a __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Law Professor</div>
+                    <div class="option" data-option="b" tabindex="0">b) Judge</div>
+                    <div class="option" data-option="c" tabindex="0">c) Business Executive</div>
+                    <div class="option" data-option="d" tabindex="0">d) Journalist</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="8">
+                <p class="question">8. Dallin H. Oaks: Where did Dallin H. Oaks receive his law degree?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Stanford University</div>
+                    <div class="option" data-option="b" tabindex="0">b) Harvard Law School</div>
+                    <div class="option" data-option="c" tabindex="0">c) University of Chicago Law School</div>
+                    <div class="option" data-option="d" tabindex="0">d) Yale Law School</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="9">
+                <p class="question">9. Dallin H. Oaks: Justice Oaks served as a law clerk for Chief Justice Earl __________ of the United States Supreme Court. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Warren</div>
+                    <div class="option" data-option="b" tabindex="0">b) Burger</div>
+                    <div class="option" data-option="c" tabindex="0">c) Rehnquist</div>
+                    <div class="option" data-option="d" tabindex="0">d) Roberts</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="10">
+                <p class="question">10. Dallin H. Oaks: Dallin H. Oaks was admitted to the bar in which state?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) California</div>
+                    <div class="option" data-option="b" tabindex="0">b) Utah</div>
+                    <div class="option" data-option="c" tabindex="0">c) Illinois</div>
+                    <div class="option" data-option="d" tabindex="0">d) New York</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="11">
+                <p class="question">11. Henry B. Eyring: Henry B. Eyring has a doctorate in __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Physics</div>
+                    <div class="option" data-option="b" tabindex="0">b) Education</div>
+                    <div class="option" data-option="c" tabindex="0">c) Business Administration</div>
+                    <div class="option" data-option="d" tabindex="0">d) Economics</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="12">
+                <p class="question">12. Henry B. Eyring: President Eyring taught at the Stanford Graduate School of __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Education</div>
+                    <div class="option" data-option="b" tabindex="0">b) Engineering</div>
+                    <div class="option" data-option="c" tabindex="0">c) Business</div>
+                    <div class="option" data-option="d" tabindex="0">d) Law</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="13">
+                <p class="question">13. Henry B. Eyring: Where did Henry B. Eyring earn his doctorate?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Stanford University</div>
+                    <div class="option" data-option="b" tabindex="0">b) Harvard University</div>
+                    <div class="option" data-option="c" tabindex="0">c) University of Utah</div>
+                    <div class="option" data-option="d" tabindex="0">d) MIT</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="14">
+                <p class="question">14. Henry B. Eyring: President Eyring served as the commissioner of Church __________ for the Church. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Welfare</div>
+                    <div class="option" data-option="b" tabindex="0">b) Finances</div>
+                    <div class="option" data-option="c" tabindex="0">c) Education</div>
+                    <div class="option" data-option="d" tabindex="0">d) Temples</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="15">
+                <p class="question">15. Henry B. Eyring: Where did President Eyring receive his undergraduate degree?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) University of Utah</div>
+                    <div class="option" data-option="b" tabindex="0">b) Brigham Young University</div>
+                    <div class="option" data-option="c" tabindex="0">c) Harvard University</div>
+                    <div class="option" data-option="d" tabindex="0">d) Stanford University</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <h2 class="section-title">Quorum of the Twelve Apostles</h2>
+
+            <div class="mb-6" data-question="16">
+                <p class="question">16. Jeffrey R. Holland: Jeffrey R. Holland served as the president of __________ University. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Stanford</div>
+                    <div class="option" data-option="b" tabindex="0">b) Utah State</div>
+                    <div class="option" data-option="c" tabindex="0">c) Brigham Young</div>
+                    <div class="option" data-option="d" tabindex="0">d) University of Utah</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="17">
+                <p class="question">17. Jeffrey R. Holland: Elder Holland received a master's degree in __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) History</div>
+                    <div class="option" data-option="b" tabindex="0">b) Religious Education</div>
+                    <div class="option" data-option="c" tabindex="0">c) English</div>
+                    <div class="option" data-option="d" tabindex="0">d) Education Administration</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="18">
+                <p class="question">18. Jeffrey R. Holland: Before his university presidency, Elder Holland served as a __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Seminary Teacher</div>
+                    <div class="option" data-option="b" tabindex="0">b) Institute Director</div>
+                    <div class="option" data-option="c" tabindex="0">c) Church Education System Administrator</div>
+                    <div class="option" data-option="d" tabindex="0">d) All of the above</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="19">
+                <p class="question">19. Jeffrey R. Holland: Elder Holland received his Ph.D. in American Studies from __________ University. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Stanford</div>
+                    <div class="option" data-option="b" tabindex="0">b) Harvard</div>
+                    <div class="option" data-option="c" tabindex="0">c) Yale</div>
+                    <div class="option" data-option="d" tabindex="0">d) Indiana</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="20">
+                <p class="question">20. Jeffrey R. Holland: Elder Holland served as Dean of __________ at BYU. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Humanities</div>
+                    <div class="option" data-option="b" tabindex="0">b) Fine Arts</div>
+                    <div class="option" data-option="c" tabindex="0">c) Religious Education</div>
+                    <div class="option" data-option="d" tabindex="0">d) Social Sciences</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="21">
+                <p class="question">21. Dieter F. Uchtdorf: Dieter F. Uchtdorf had a career in __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Aviation</div>
+                    <div class="option" data-option="b" tabindex="0">b) Law</div>
+                    <div class="option" data-option="c" tabindex="0">c) Business</div>
+                    <div class="option" data-option="d" tabindex="0">d) Medicine</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="22">
+                <p class="question">22. Dieter F. Uchtdorf: In his aviation career, Elder Uchtdorf flew which type of aircraft?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Commercial Airliners</div>
+                    <div class="option" data-option="b" tabindex="0">b) Fighter Jets</div>
+                    <div class="option" data-option="c" tabindex="0">c) Cargo Planes</div>
+                    <div class="option" data-option="d" tabindex="0">d) Helicopters</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="23">
+                <p class="question">23. Dieter F. Uchtdorf: Elder Uchtdorf held a senior position in which airline?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Lufthansa</div>
+                    <div class="option" data-option="b" tabindex="0">b) British Airways</div>
+                    <div class="option" data-option="c" tabindex="0">c) Air France</div>
+                    <div class="option" data-option="d" tabindex="0">d) KLM</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="24">
+                <p class="question">24. Dieter F. Uchtdorf: Elder Uchtdorf received an honorary doctorate from which university?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Harvard</div>
+                    <div class="option" data-option="b" tabindex="0">b) Stanford</div>
+                    <div class="option" data-option="c" tabindex="0">c) Embry-Riddle Aeronautical University</div>
+                    <div class="option" data-option="d" tabindex="0">d) University of Utah</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="25">
+                <p class="question">25. Dieter F. Uchtdorf: Elder Uchtdorf was trained as a __________ in the German Air Force. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Mechanic</div>
+                    <div class="option" data-option="b" tabindex="0">b) Fighter Pilot</div>
+                    <div class="option" data-option="c" tabindex="0">c) Engineer</div>
+                    <div class="option" data-option="d" tabindex="0">d) Navigator</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="26">
+                <p class="question">26. David A. Bednar: David A. Bednar was the president of __________ University - Idaho. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Brigham Young</div>
+                    <div class="option" data-option="b" tabindex="0">b) University of Idaho</div>
+                    <div class="option" data-option="c" tabindex="0">c) Idaho State</div>
+                    <div class="option" data-option="d" tabindex="0">d) Boise State</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="27">
+                <p class="question">27. David A. Bednar: Elder Bednar earned a doctorate in __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Organizational Behavior</div>
+                    <div class="option" data-option="b" tabindex="0">b) Religious Studies</div>
+                    <div class="option" data-option="c" tabindex="0">c) History</div>
+                    <div class="option" data-option="d" tabindex="0">d) Educational Leadership</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="28">
+                <p class="question">28. David A. Bednar: Before his university presidency, Elder Bednar was a professor at __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Brigham Young University</div>
+                    <div class="option" data-option="b" tabindex="0">b) Texas Tech University</div>
+                    <div class="option" data-option="c" tabindex="0">c) University of Arkansas</div>
+                    <div class="option" data-option="d" tabindex="0">d) Purdue University</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="29">
+                <p class="question">29. David A. Bednar: Elder Bednar's undergraduate degree is from __________ University. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Brigham Young University</div>
+                    <div class="option" data-option="b" tabindex="0">b) University of Utah</div>
+                    <div class="option" data-option="c" tabindex="0">c) University of California</div>
+                    <div class="option" data-option="d" tabindex="0">d) Stanford University</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="30">
+                <p class="question">30. David A. Bednar: Elder Bednar served a full-time mission in which country?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Germany</div>
+                    <div class="option" data-option="b" tabindex="0">b) Switzerland</div>
+                    <div class="option" data-option="c" tabindex="0">c) Austria</div>
+                    <div class="option" data-option="d" tabindex="0">d) Spain</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="31">
+                <p class="question">31. Quentin L. Cook: Quentin L. Cook was a managing partner in the law firm of __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Kirkland & Ellis</div>
+                    <div class="option" data-option="b" tabindex="0">b) Sidley Austin</div>
+                    <div class="option" data-option="c" tabindex="0">c) Carrington, Coleman, Sloman & Blumenthal</div>
+                    <div class="option" data-option="d" tabindex="0">d) Pillsbury, Madison and Sutro</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="32">
+                <p class="question">32. Quentin L. Cook: Elder Cook received his law degree from __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Stanford University</div>
+                    <div class="option" data-option="b" tabindex="0">b) University of California, Berkeley</div>
+                    <div class="option" data-option="c" tabindex="0">c) University of Utah</div>
+                    <div class="option" data-option="d" tabindex="0">d) Harvard University</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="33">
+                <p class="question">33. Quentin L. Cook: Elder Cook served as a business executive for which healthcare system?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Kaiser Permanente</div>
+                    <div class="option" data-option="b" tabindex="0">b) California Healthcare System</div>
+                    <div class="option" data-option="c" tabindex="0">c) Intermountain Healthcare</div>
+                    <div class="option" data-option="d" tabindex="0">d) Sutter Health</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="34">
+                <p class="question">34. Quentin L. Cook: Elder Cook served as president and CEO of __________ Healthcare System. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Kaiser Permanente</div>
+                    <div class="option" data-option="b" tabindex="0">b) California Healthcare System</div>
+                    <div class="option" data-option="c" tabindex="0">c) Intermountain Healthcare</div>
+                    <div class="option" data-option="d" tabindex="0">d) Sutter Health</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="35">
+                <p class="question">35. Quentin L. Cook: Where did Elder Cook receive his bachelor's degree?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Utah State University</div>
+                    <div class="option" data-option="b" tabindex="0">b) Stanford University</div>
+                    <div class="option" data-option="c" tabindex="0">c) University of California</div>
+                    <div class="option" data-option="d" tabindex="0">d) Brigham Young University</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="36">
+                <p class="question">36. D. Todd Christofferson: D. Todd Christofferson clerked for U.S. District Court Judge __________ during the Watergate trials. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Irving Hill</div>
+                    <div class="option" data-option="b" tabindex="0">b) John Sirica</div>
+                    <div class="option" data-option="c" tabindex="0">c) Miles Lord</div>
+                    <div class="option" data-option="d" tabindex="0">d) Gerhard Gesell</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="37">
+                <p class="question">37. D. Todd Christofferson: Elder Christofferson received his law degree from __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Duke University</div>
+                    <div class="option" data-option="b" tabindex="0">b) University of Virginia</div>
+                    <div class="option" data-option="c" tabindex="0">c) Yale Law School</div>
+                    <div class="option" data-option="d" tabindex="0">d) Cornell Law School</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="38">
+                <p class="question">38. D. Todd Christofferson: Before his full-time Church service, Elder Christofferson worked as a __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Corporate Lawyer</div>
+                    <div class="option" data-option="b" tabindex="0">b) Prosecutor</div>
+                    <div class="option" data-option="c" tabindex="0">c) Public Defender</div>
+                    <div class="option" data-option="d" tabindex="0">d) Judge</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="39">
+                <p class="question">39. D. Todd Christofferson: Elder Christofferson served as associate general counsel for NationsBank (now Bank of __________). </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) America</div>
+                    <div class="option" data-option="b" tabindex="0">b) Wells Fargo</div>
+                    <div class="option" data-option="c" tabindex="0">c) JPMorgan Chase</div>
+                    <div class="option" data-option="d" tabindex="0">d) Citigroup</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="40">
+                <p class="question">40. D. Todd Christofferson: Where did Elder Christofferson receive his undergraduate degree?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Brigham Young University</div>
+                    <div class="option" data-option="b" tabindex="0">b) University of Utah</div>
+                    <div class="option" data-option="c" tabindex="0">c) Harvard University</div>
+                    <div class="option" data-option="d" tabindex="0">d) Duke University</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="41">
+                <p class="question">41. Neil L. Andersen: Neil L. Andersen received his MBA from __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Stanford</div>
+                    <div class="option" data-option="b" tabindex="0">b) Harvard</div>
+                    <div class="option" data-option="c" tabindex="0">c) Duke</div>
+                    <div class="option" data-option="d" tabindex="0">d) University of Utah</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="42">
+                <p class="question">42. Neil L. Andersen: Elder Andersen's career was primarily in __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Healthcare Administration</div>
+                    <div class="option" data-option="b" tabindex="0">b) Real Estate Development</div>
+                    <div class="option" data-option="c" tabindex="0">c) Education</div>
+                    <div class="option" data-option="d" tabindex="0">d) Advertising</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="43">
+                <p class="question">43. Neil L. Andersen: Elder Andersen co-owned a healthcare-related business in which state?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) California</div>
+                    <div class="option" data-option="b" tabindex="0">b) Utah</div>
+                    <div class="option" data-option="c" tabindex="0">c) Florida</div>
+                    <div class="option" data-option="d" tabindex="0">d) Texas</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="44">
+                <p class="question">44. Neil L. Andersen: Elder Andersen served as a mission president in __________, France. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Paris</div>
+                    <div class="option" data-option="b" tabindex="0">b) Lyon</div>
+                    <div class="option" data-option="c" tabindex="0">c) Bordeaux</div>
+                    <div class="option" data-option="d" tabindex="0">d) Marseille</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="45">
+                <p class="question">45. Neil L. Andersen: Where did Elder Andersen receive his bachelor's degree?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Brigham Young University</div>
+                    <div class="option" data-option="b" tabindex="0">b) University of Utah</div>
+                    <div class="option" data-option="c" tabindex="0">c) Harvard University</div>
+                    <div class="option" data-option="d" tabindex="0">d) Stanford University</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="46">
+                <p class="question">46. Ronald A. Rasband: Ronald A. Rasband spent his career with the __________ Corporation. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) 3M</div>
+                    <div class="option" data-option="b" tabindex="0">b) Honeywell</div>
+                    <div class="option" data-option="c" tabindex="0">c) Huntsman</div>
+                    <div class="option" data-option="d" tabindex="0">d) Dow Chemical</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="47">
+                <p class="question">47. Ronald A. Rasband: Elder Rasband's highest position at his company was __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Chief Financial Officer</div>
+                    <div class="option" data-option="b" tabindex="0">b) President and Chief Operating Officer</div>
+                    <div class="option" data-option="c" tabindex="0">c) Chief Executive Officer</div>
+                    <div class="option" data-option="d" tabindex="0">d) Chairman of the Board</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="48">
+                <p class="question">48. Ronald A. Rasband: Elder Rasband served on the Board of Trustees for which university?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Brigham Young University</div>
+                    <div class="option" data-option="b" tabindex="0">b) University of Utah</div>
+                    <div class="option" data-option="c" tabindex="0">c) Utah State University</div>
+                    <div class="option" data-option="d" tabindex="0">d) Weber State University</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="49">
+                <p class="question">49. Ronald A. Rasband: Elder Rasband also served on the Board of Directors of __________ First National Bank. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Zions</div>
+                    <div class="option" data-option="b" tabindex="0">b) Wells Fargo</div>
+                    <div class="option" data-option="c" tabindex="0">c) US Bank</div>
+                    <div class="option" data-option="d" tabindex="0">d) Bank of America</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="50">
+                <p class="question">50. Ronald A. Rasband: Elder Rasband served as a full-time missionary in which mission?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Eastern States Mission</div>
+                    <div class="option" data-option="b" tabindex="0">b) Southern States Mission</div>
+                    <div class="option" data-option="c" tabindex="0">c) British Mission</div>
+                    <div class="option" data-option="d" tabindex="0">d) California Mission</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="51">
+                <p class="question">51. Gary E. Stevenson: Gary E. Stevenson co-founded and served as president of __________ Fitness, a company that manufactured exercise equipment. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Nautilus</div>
+                    <div class="option" data-option="b" tabindex="0">b) Icon</div>
+                    <div class="option" data-option="c" tabindex="0">c) Peloton</div>
+                    <div class="option" data-option="d" tabindex="0">d) Life Fitness</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="52">
+                <p class="question">52. Gary E. Stevenson: Elder Stevenson's professional background is in __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Healthcare Administration</div>
+                    <div class="option" data-option="b" tabindex="0">b) Business and Sporting Goods</div>
+                    <div class="option" data-option="c" tabindex="0">c) Legal Services</div>
+                    <div class="option" data-option="d" tabindex="0">d) Engineering</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="53">
+                <p class="question">53. Gary E. Stevenson: Elder Stevenson served on the boards of directors of several companies, including __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Deseret Book</div>
+                    <div class="option" data-option="b" tabindex="0">b) Zions Bank</div>
+                    <div class="option" data-option="c" tabindex="0">c) Intermountain Healthcare</div>
+                    <div class="option" data-option="d" tabindex="0">d) All of the above</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="54">
+                <p class="question">54. Gary E. Stevenson: Elder Stevenson received his bachelor's degree from __________ State University. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Utah</div>
+                    <div class="option" data-option="b" tabindex="0">b) Weber</div>
+                    <div class="option" data-option="c" tabindex="0">c) Utah State</div>
+                    <div class="option" data-option="d" tabindex="0">d) Brigham Young</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="55">
+                <p class="question">55. Gary E. Stevenson: Elder Stevenson served as a mission president in which country?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Japan</div>
+                    <div class="option" data-option="b" tabindex="0">b) Taiwan</div>
+                    <div class="option" data-option="c" tabindex="0">c) Korea</div>
+                    <div class="option" data-option="d" tabindex="0">d) Thailand</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="56">
+                <p class="question">56. Dale G. Renlund: Dale G. Renlund was a professor of medicine at the University of __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Stanford</div>
+                    <div class="option" data-option="b" tabindex="0">b) Utah</div>
+                    <div class="option" data-option="c" tabindex="0">c) Johns Hopkins</div>
+                    <div class="option" data-option="d" tabindex="0">d) Harvard</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="57">
+                <p class="question">57. Dale G. Renlund: Elder Renlund's medical specialty is __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Cardiology</div>
+                    <div class="option" data-option="b" tabindex="0">b) Oncology</div>
+                    <div class="option" data-option="c" tabindex="0">c) Nephrology</div>
+                    <div class="option" data-option="d" tabindex="0">d) Endocrinology</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="58">
+                <p class="question">58. Dale G. Renlund: Elder Renlund served as the medical director of the __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Utah Transplantation Affiliated Hospitals Cardiac Transplant Program</div>
+                    <div class="option" data-option="b" tabindex="0">b) Johns Hopkins Heart Institute</div>
+                    <div class="option" data-option="c" tabindex="0">c) Mayo Clinic Transplant Center</div>
+                    <div class="option" data-option="d" tabindex="0">d) Cleveland Clinic Heart Institute</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="59">
+                <p class="question">59. Dale G. Renlund: Elder Renlund received his medical degree from the University of __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Stanford</div>
+                    <div class="option" data-option="b" tabindex="0">b) Utah</div>
+                    <div class="option" data-option="c" tabindex="0">c) Johns Hopkins</div>
+                    <div class="option" data-option="d" tabindex="0">d) Harvard</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="60">
+                <p class="question">60. Dale G. Renlund: Elder Renlund completed a fellowship in cardiology at which institution?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Mayo Clinic</div>
+                    <div class="option" data-option="b" tabindex="0">b) Johns Hopkins Hospital</div>
+                    <div class="option" data-option="c" tabindex="0">c) Cleveland Clinic</div>
+                    <div class="option" data-option="d" tabindex="0">d) Stanford Hospital</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="61">
+                <p class="question">61. Gerrit W. Gong: Gerrit W. Gong was a Rhodes Scholar at __________ University. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Stanford</div>
+                    <div class="option" data-option="b" tabindex="0">b) Harvard</div>
+                    <div class="option" data-option="c" tabindex="0">c) Oxford</div>
+                    <div class="option" data-option="d" tabindex="0">d) Yale</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="62">
+                <p class="question">62. Gerrit W. Gong: Elder Gong holds a doctorate in __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) International Relations</div>
+                    <div class="option" data-option="b" tabindex="0">b) Sociology</div>
+                    <div class="option" data-option="c" tabindex="0">c) History</div>
+                    <div class="option" data-option="d" tabindex="0">d) Economics</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="63">
+                <p class="question">63. Gerrit W. Gong: Elder Gong worked for which U.S. government organization?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) State Department</div>
+                    <div class="option" data-option="b" tabindex="0">b) National Security Council</div>
+                    <div class="option" data-option="c" tabindex="0">c) Department of Defense</div>
+                    <div class="option" data-option="d" tabindex="0">d) CIA</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="64">
+                <p class="question">64. Gerrit W. Gong: Elder Gong worked as a special assistant to the U.S. Ambassador in __________, China. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Shanghai</div>
+                    <div class="option" data-option="b" tabindex="0">b) Guangzhou</div>
+                    <div class="option" data-option="c" tabindex="0">c) Beijing</div>
+                    <div class="option" data-option="d" tabindex="0">d) Hong Kong</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="65">
+                <p class="question">65. Gerrit W. Gong: Where did Elder Gong receive his undergraduate degree?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Stanford University</div>
+                    <div class="option" data-option="b" tabindex="0">b) Brigham Young University</div>
+                    <div class="option" data-option="c" tabindex="0">c) Harvard University</div>
+                    <div class="option" data-option="d" tabindex="0">d) Oxford University</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="66">
+                <p class="question">66. Ulisses Soares: Ulisses Soares earned a degree in __________ and business administration from São Paulo Pontifical Catholic University. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Accounting</div>
+                    <div class="option" data-option="b" tabindex="0">b) Economics</div>
+                    <div class="option" data-option="c" tabindex="0">c) Law</div>
+                    <div class="option" data-option="d" tabindex="0">d) Engineering</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="67">
+                <p class="question">67. Ulisses Soares: Elder Soares's career was in __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Accounting</div>
+                    <div class="option" data-option="b" tabindex="0">b) Business Administration</div>
+                    <div class="option" data-option="c" tabindex="0">c) Law</div>
+                    <div class="option" data-option="d" tabindex="0">d) Engineering</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="68">
+                <p class="question">68. Ulisses Soares: Elder Soares held executive positions in which company?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Ford</div>
+                    <div class="option" data-option="b" tabindex="0">b) General Motors</div>
+                    <div class="option" data-option="c" tabindex="0">c) Kodak</div>
+                    <div class="option" data-option="d" tabindex="0">d) Xerox</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="69">
+                <p class="question">69. Ulisses Soares: Elder Soares served as a director for temporal affairs for the Church in which area?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Africa</div>
+                    <div class="option" data-option="b" tabindex="0">b) Asia</div>
+                    <div class="option" data-option="c" tabindex="0">c) Brazil</div>
+                    <div class="option" data-option="d" tabindex="0">d) Europe</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="70">
+                <p class="question">70. Ulisses Soares: Elder Soares served a full-time mission in which city and country?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Rio de Janeiro, Brazil</div>
+                    <div class="option" data-option="b" tabindex="0">b) Lisbon, Portugal</div>
+                    <div class="option" data-option="c" tabindex="0">c) Mexico City, Mexico</div>
+                    <div class="option" data-option="d" tabindex="0">d) Buenos Aires, Argentina</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="71">
+                <p class="question">71. Patrick Kearon: Before his full-time Church service, Patrick Kearon worked in __________. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Education</div>
+                    <div class="option" data-option="b" tabindex="0">b) Business</div>
+                    <div class="option" data-option="c" tabindex="0">c) Law</div>
+                    <div class="option" data-option="d" tabindex="0">d) Medicine</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="72">
+                <p class="question">72. Patrick Kearon: Elder Kearon spent significant time working in: </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) The United States</div>
+                    <div class="option" data-option="b" tabindex="0">b) Europe and the Middle East</div>
+                    <div class="option" data-option="c" tabindex="0">c) South America</div>
+                    <div class="option" data-option="d" tabindex="0">d) Asia</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="73">
+                <p class="question">73. Patrick Kearon: Elder Kearon is fluent in which language in addition to English?</p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Spanish</div>
+                    <div class="option" data-option="b" tabindex="0">b) French</div>
+                    <div class="option" data-option="c" tabindex="0">c) German</div>
+                    <div class="option" data-option="d" tabindex="0">d) Portuguese</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="74">
+                <p class="question">74. Patrick Kearon: Elder Kearon was born in __________, England. </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) London</div>
+                    <div class="option" data-option="b" tabindex="0">b) Manchester</div>
+                    <div class="option" data-option="c" tabindex="0">c) Carlisle</div>
+                    <div class="option" data-option="d" tabindex="0">d) Birmingham</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+
+            <div class="mb-6" data-question="75">
+                <p class="question">75. Patrick Kearon: Elder Kearon's Church service has notably involved assisting: </p>
+                <div class="options">
+                    <div class="option" data-option="a" tabindex="0">a) Refugees</div>
+                    <div class="option" data-option="b" tabindex="0">b) Children</div>
+                    <div class="option" data-option="c" tabindex="0">c) Elderly</div>
+                    <div class="option" data-option="d" tabindex="0">d) Disabled</div>
+                </div>
+                <button class="check-answer-button">Check Answer</button>
+            </div>
+        </div>
+
+        <div class="results">
+            <p>Your Score: <span id="score">0</span> / 75</p>
+            <p>Correct Answers: <span id="correct-answers">0</span></p>
+        </div>
+        <button class="reset-quiz-button">Reset Quiz</button>
+    </div>
+
+    <script>
+        const options = document.querySelectorAll('.option');
+        const checkAnswerButtons = document.querySelectorAll('.check-answer-button');
+        const resultsContainer = document.querySelector('.results');
+        const scoreDisplay = document.getElementById('score');
+        const correctAnswersDisplay = document.getElementById('correct-answers');
+        const resetButton = document.querySelector('.reset-quiz-button');
+
+        let score = 0;
+        let correctAnswers = 0;
+        let answeredQuestions = new Set();
+
+        const correctAnswersData = {
+            1: 'b', 2: 'a', 3: 'c', 4: 'b', 5: 'b', 6: 'c', 7: 'a', 8: 'c', 9: 'a', 10: 'c',
+            11: 'c', 12: 'c', 13: 'b', 14: 'c', 15: 'a', 16: 'c', 17: 'b', 18: 'd', 19: 'c', 20: 'c',
+            21: 'a', 22: 'a', 23: 'a', 24: 'c', 25: 'b', 26: 'a', 27: 'a', 28: 'c', 29: 'a', 30: 'a',
+            31: 'd', 32: 'a', 33: 'b', 34: 'd', 35: 'a', 36: 'b', 37: 'a', 38: 'a', 39: 'a', 40: 'a',
+            41: 'b', 42: 'b', 43: 'c', 44: 'c', 45: 'a', 46: 'c', 47: 'b', 48: 'a', 49: 'a', 50: 'a',
+            51: 'b', 52: 'b', 53: 'd', 54: 'c', 55: 'a', 56: 'b', 57: 'a', 58: 'a', 59: 'b', 60: 'b',
+            61: 'c', 62: 'a', 63: 'a', 64: 'c', 65: 'b', 66: 'a', 67: 'a', 68: 'c', 69: 'c', 70: 'a',
+            71: 'b', 72: 'b', 73: 'b', 74: 'c', 75: 'a'
+        };
+
+        options.forEach(option => {
+            option.addEventListener('click', function() {
+                const isSelected = this.classList.contains('selected');
+                clearSelection(this.parentElement);
+                if (!isSelected) {
+                    this.classList.add('selected');
+                }
+            });
+            option.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    const isSelected = option.classList.contains('selected');
+                    clearSelection(option.parentElement);
+                    if (!isSelected) {
+                        option.classList.add('selected');
+                    }
+                }
+            });
+        });
+
+        function clearSelection(optionContainer) {
+            const options = optionContainer.querySelectorAll('.option');
+            options.forEach(option => {
+                option.classList.remove('selected');
+                option.classList.remove('correct');
+                option.classList.remove('incorrect');
+            });
+        }
+
+        checkAnswerButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const questionDiv = button.closest('.mb-6');
+                const questionNumber = parseInt(questionDiv.dataset.question);
+                const selectedOption = questionDiv.querySelector('.option.selected');
+
+                if (!selectedOption) {
+                    alert('Please select an answer before checking.');
+                    return;
+                }
+
+                if (answeredQuestions.has(questionNumber)) {
+                    return;
+                }
+
+                answeredQuestions.add(questionNumber);
+
+                if (selectedOption.dataset.option === correctAnswersData[questionNumber]) {
+                    score++;
+                    correctAnswers++;
+                    selectedOption.classList.add('correct');
+                } else {
+                    selectedOption.classList.add('incorrect');
+                    const correctOption = questionDiv.querySelector(`.option[data-option="${correctAnswersData[questionNumber]}"]`);
+                    if (correctOption) correctOption.classList.add('correct');
+                }
+
+                questionDiv.querySelectorAll('.option').forEach(opt => opt.style.pointerEvents = 'none');
+                button.disabled = true;
+
+                scoreDisplay.textContent = score;
+                correctAnswersDisplay.textContent = correctAnswers;
+            });
+        });
+
+        resetButton.addEventListener('click', () => {
+            score = 0;
+            correctAnswers = 0;
+            answeredQuestions.clear();
+
+            scoreDisplay.textContent = score;
+            correctAnswersDisplay.textContent = correctAnswers;
+
+            document.querySelectorAll('.mb-6').forEach(questionDiv => {
+                const options = questionDiv.querySelectorAll('.option');
+                options.forEach(option => {
+                    option.classList.remove('selected');
+                    option.classList.remove('correct');
+                    option.classList.remove('incorrect');
+                    option.style.pointerEvents = 'auto';
+                });
+                questionDiv.querySelector('.check-answer-button').disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>
